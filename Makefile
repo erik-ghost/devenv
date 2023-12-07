@@ -9,7 +9,7 @@ emacs-js:
     -it \
     --rm \
     --name emacs-js \
-    -p8080:8080 \
+    -p 8080:8080 \
     -p 3000:3000 \
     -v /run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock \
     -e SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock \

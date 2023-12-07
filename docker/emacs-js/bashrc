@@ -1,3 +1,5 @@
+# -*- mode:sh -*-
+
 namei -l /run/host-services/ssh-auth.sock | tail -n-1 | grep srwxrwxrwx
 rc=$?
 

@@ -12,6 +12,7 @@ RUN apt-get update -y && apt-get install --no-install-recommends -y \
     curl \
     httpie \
     openssh-client \
+    cargo \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update -y && apt-get install --no-install-recommends -y \
@@ -73,8 +74,9 @@ RUN cd /home/${user}/.emacs.d && \
     wget https://raw.githubusercontent.com/gregsexton/origami.el/master/origami-parsers.el && \
     wget https://raw.githubusercontent.com/gregsexton/origami.el/master/origami.el && \
     wget https://raw.githubusercontent.com/orzechowskid/tsx-mode.el/emacs28/css-in-js.el && \
-    wget https://raw.githubusercontent.com/orzechowskid/tsx-mode.el/emacs28/graphql.el && \
-    wget https://raw.githubusercontent.com/orzechowskid/tsx-mode.el/emacs28/tsx-mode.el
+    wget https://raw.githubusercontent.com/orzechowskid/tsx-mode.el/emacs28/graphql.el
+
+COPY --chown=${user}:${user} docker/emacs-js/tsx-mode.el /home/${user}/.emacs.d/
 
 RUN cd /home/${user}/.emacs.d && \
     git clone https://github.com/zerolfx/copilot.el.git
