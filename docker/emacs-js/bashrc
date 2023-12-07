@@ -1,0 +1,15 @@
+namei -l /run/host-services/ssh-auth.sock | tail -n-1 | grep srwxrwxrwx
+rc=$?
+
+if [[ $rc != 0 ]]; then
+   echo "no permissions to /run/host-services/ssh-auth.sock"
+   echo "make sure to start Docker with SSH_AUTH_SOCK"
+   echo " eg: SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock open /Applications/Docker.app"
+   echo "confirm 777 ownership on /run/host-services/ssh-auth.sock"
+   echo " eg: docker exec -u root -it emacs-js sh"
+   echo "and:"
+   echo " chmod 777 /run/host-services/ssh-auth.sock"
+   echo "then either rebuild the container or just run `emacs`"
+else
+   emacs
+fi

@@ -1,0 +1,17 @@
+[alias]
+	st = status
+	ci = commit
+[user]
+	name = Erik Enge
+	email = erik@ghost.org
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID3VLegcbamn2zTyDtW06Cfnegb7pLGwsQZVSgqIP/B7
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[fetch]
+	prune = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
