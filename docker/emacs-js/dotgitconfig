@@ -4,7 +4,7 @@
 [user]
 	name = Erik Enge
 	email = erik@ghost.org
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID3VLegcbamn2zTyDtW06Cfnegb7pLGwsQZVSgqIP/B7
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIzgVJl5ZyXNgj/OFLP/VMltra3U3wkB9ZDB18BPJSko
 [pull]
 	rebase = true
 [rebase]

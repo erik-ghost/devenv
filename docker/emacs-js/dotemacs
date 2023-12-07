@@ -66,7 +66,6 @@
 ;; keybindings
 (global-set-key (kbd "C-x g") 'magit-status)
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
-(global-set-key (kbd"C-c .") 'godef-jump)
 
 (custom-set-faces
  ;; other faces
@@ -82,7 +81,7 @@
 (setq auto-save-default nil)
 (setq create-lockfiles nil)
 
-(setq initial-buffer-choice "~/repo/Ghost.org")
+(setq initial-buffer-choice "~/repo/erik-ghost/devenv")
 
 ; disable annoying logs
 (custom-set-variables

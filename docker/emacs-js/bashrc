@@ -9,7 +9,7 @@ if [[ $rc != 0 ]]; then
    echo " eg: docker exec -u root -it emacs-js sh"
    echo "and:"
    echo " chmod 777 /run/host-services/ssh-auth.sock"
-   echo "then either rebuild the container or just run `emacs`"
+   echo "then either rebuild the container or just run emacs"
 else
    emacs
 fi
